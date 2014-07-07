@@ -1,0 +1,17 @@
+# Ruby
+rholog-*
+sim-*
+bin/libs
+bin/RhoBundle
+bin/tmp
+bin/target
+bin/*.ap_
+*.o
+*.jar
+
+# Eclipse Aptana Geppetto Vagrant
+.settings/*
+.project
+*/*.swp
+.vagrant/
+

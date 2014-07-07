@@ -1,0 +1,7 @@
+# Puppet Template file
+# Do not edit
+
+# LUN0
+Target iqn.2014-07.local.callflex.<%= @hostname.capitalize %>:target0
+	IncomingUser <%= @iscsitarget_user %> <%= @iscsitarget_password %>
+	Lun 0 Path=<%= @iscsitarget_path %>, Type=<%= @iscsitarget_type %>
