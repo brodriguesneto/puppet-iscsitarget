@@ -18,4 +18,18 @@ class iscsitarget::config {
     require => Package[$iscsitarget::params::package],
     notify  => Service[$iscsitarget::params::service],
   }
+
+  file { $iscsitarget::params::apci_powerbtn:
+    mode    => '0755',
+    source  => "puppet:///modules/${module_name}/powerbtn.sh",
+    require => Package[$iscsitarget::params::package],
+    notify  => Service[$iscsitarget::params::service],
+  }
+
+  file { $iscsitarget::params::init_ctrl_alt_del:
+    mode    => '0644',
+    source  => "puppet:///modules/${module_name}/control-alt-delete.conf",
+    require => Package[$iscsitarget::params::package],
+    notify  => Service[$iscsitarget::params::service],
+  }
 }
