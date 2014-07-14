@@ -1,3 +1,4 @@
+# Class: params
 class iscsitarget::params {
   case $::operatingsystem {
     'Ubuntu' : {
@@ -8,12 +9,12 @@ class iscsitarget::params {
           $service              = 'iscsitarget'
           $iscsitarget_default  = '/etc/default/iscsitarget'
           $iscsitarget_ietd     = '/etc/iet/ietd.conf'
-          $apci_powerbtn        = '/etc/acpi/powerbtn.sh'
-          $init_ctrl_alt_del    = '/etc/init/control-alt-delete.conf'
           $iscsitarget_user     = 'user'
           $iscsitarget_password = 'password'
           $iscsitarget_path     = '/dev/sdb1'
           $iscsitarget_type     = 'blockio'
+          $acpid_powerbtn       = '/etc/acpi/powerbtn.sh'
+          $ctrl_alt_del_init    = '/etc/init/control-alt-delete.conf'
         }
         default         : {
           case $::lsbdistrelease {

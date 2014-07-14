@@ -1,3 +1,4 @@
+# Class: service
 class iscsitarget::service {
   service { $iscsitarget::params::service:
     ensure     => running,
