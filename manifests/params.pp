@@ -5,7 +5,7 @@ class iscsitarget::params {
       case $::lsbdistrelease {
         /(12.04|14.04)/ : {
           $package              = 'iscsitarget'
-          $packages_extra       = ['iscsitarget-dkms', 'dkms', 'make', 'acpid']
+          $packages_extra       = ['iscsitarget-dkms', 'acpid']
           $service              = 'iscsitarget'
           $iscsitarget_default  = '/etc/default/iscsitarget'
           $iscsitarget_ietd     = '/etc/iet/ietd.conf'
